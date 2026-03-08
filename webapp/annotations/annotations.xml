@@ -451,6 +451,43 @@
             <Annotations Target="Metadata.SortedWchRep/Sale3">
                 <Annotation Term="Common.Label" String="{@i18n&gt;Sale3}" />
             </Annotations>
+
+            <Annotations Target="Metadata.SortedWchRep/Prestored4">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Prestored4}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/Z4Inc">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Z4Inc}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/ChipBk">
+                <Annotation Term="Common.Label" String="{@i18n&gt;ChipBk}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/Exhalation4">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Exhalation4}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/Scrap4">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Scrap4}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/Opcor4">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Opcor4}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/Invcor4">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Invcor4}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/ChipSawAft4">
+                <Annotation Term="Common.Label" String="{@i18n&gt;ChipSawAft4}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/ChipSawBk">
+                <Annotation Term="Common.Label" String="{@i18n&gt;ChipSawBk}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/OpcorCo4">
+                <Annotation Term="Common.Label" String="{@i18n&gt;OpcorCo4}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/InvcorCo4">
+                <Annotation Term="Common.Label" String="{@i18n&gt;InvcorCo4}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/Stored4">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Stored4}" />
+            </Annotations>
         </Schema>
     </edmx:DataServices>
 </edmx:Edmx>
