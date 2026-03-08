@@ -1,396 +1,456 @@
 <edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
-	<edmx:Reference Uri="/sap/opu/odata/sap/ZLBPWA_AC_SRV/$metadata">
-		<edmx:Include Alias="Metadata" Namespace="ZLBPWA_AC_SRV"/>
-	</edmx:Reference>
-	<edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470968/UI.xml?api=v2">
-		<edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
-	</edmx:Reference>
-	<edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470974/Common.xml?api=v2">
-		<edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
-	</edmx:Reference>
-	<edmx:DataServices>
-		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="zlbpwa_sortedwchrep.annotations.annotations.ZLBPWA_AC_SRV">
-			<Annotations Target="Metadata.SortedWchRep">
-				<Annotation Term="UI.PresentationVariant">
-					<Record Type="UI.PresentationVariantType">
-						<PropertyValue Property="SortOrder">
-							<Collection>
-								<Record Type="Common.SortOrderType">
-									<PropertyValue Property="Property" PropertyPath="Date"/>
-								</Record>
-								<Record Type="Common.SortOrderType">
-									<PropertyValue Property="Property" PropertyPath="DecadeDec"/>
-								</Record>
-								<Record Type="Common.SortOrderType">
-									<PropertyValue Property="Property" PropertyPath="FiscalPeriod"/>
-								</Record>
-							</Collection>
-						</PropertyValue>
-						<PropertyValue Property="RequestAtLeast">
-							<Collection>
-								<PropertyPath>Date</PropertyPath>
-								<PropertyPath>DecadeDec</PropertyPath>
-								<PropertyPath>Z2Inc</PropertyPath>
-								<PropertyPath>Exhalation</PropertyPath>
-								<PropertyPath>Prestored</PropertyPath>
-								<PropertyPath>Opcor</PropertyPath>
-								<PropertyPath>Invcor</PropertyPath>
-								<PropertyPath>Scrap</PropertyPath>
-								<PropertyPath>Prestored1</PropertyPath>
-								<PropertyPath>Inc</PropertyPath>
-								<PropertyPath>Chip</PropertyPath>
-								<PropertyPath>ChipSawAft</PropertyPath>
-								<PropertyPath>ChipSawOp</PropertyPath>
-								<PropertyPath>OpcorCo</PropertyPath>
-								<PropertyPath>InvcorCo</PropertyPath>
-								<PropertyPath>InvcorCo2</PropertyPath>
-								<PropertyPath>InvcorCo3</PropertyPath>
-								<PropertyPath>Stored1</PropertyPath>
-								<PropertyPath>Prestored2</PropertyPath>
-								<PropertyPath>ChipNak</PropertyPath>
-								<PropertyPath>ChipMm</PropertyPath>
-								<PropertyPath>Exhalation2</PropertyPath>
-								<PropertyPath>Scrap2</PropertyPath>
-								<PropertyPath>Opcor2</PropertyPath>
-								<PropertyPath>Invcor2</PropertyPath>
-								<PropertyPath>ChipSawAft2</PropertyPath>
-								<PropertyPath>ChipSaw</PropertyPath>
-								<PropertyPath>OpcorCo2</PropertyPath>
-								<PropertyPath>OpcorCo3</PropertyPath>
-								<PropertyPath>Invcor</PropertyPath>
-								<PropertyPath>Stored2</PropertyPath>
-								<PropertyPath>ChipSawAll</PropertyPath>
-								<PropertyPath>Stored</PropertyPath>
-								<PropertyPath>FiscalPeriod</PropertyPath>
-							</Collection>
-						</PropertyValue>
-						<PropertyValue Property="Visualizations">
-							<Collection>
-								<AnnotationPath>@UI.LineItem</AnnotationPath>
-							</Collection>
-						</PropertyValue>
-					</Record>
-				</Annotation>
-				<Annotation Term="UI.SelectionFields">
-					<Collection>
-						<PropertyPath>Date</PropertyPath>
-					</Collection>
-				</Annotation>
-				<Annotation Term="UI.LineItem">
-					<Collection>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="FiscalPeriod"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;fiscalPeriod}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="DecadeDec"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;decade}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="Date"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;date}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="Prestored"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;prestored}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="Prestored1"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;prestored1}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="Inc"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;inc}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="Chip"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;chip}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="Exhalation"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;exhalation}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="Scrap"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;scrap}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="Opcor"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;opcor}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="Invcor"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;invcor}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="ChipSawAft"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;chip_saw_aft}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="ChipSawOp"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;chip_saw_op}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="OpcorCo"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;opcor_co}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="InvcorCo"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;incor_co}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="Stored1"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;stored1}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="Prestored2"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;prestored2}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="Z2Inc"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;2_inc}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="ChipNak"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;chip_nak}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="ChipMm"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;chip_mm}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="Exhalation2"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;exhalation2}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="Scrap2"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;scrap2}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="Opcor2"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;opcor2}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="Invcor2"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;invcor2}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="ChipSawAft2"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;chip_saw_aft2}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="ChipSaw"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;chip_saw}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="OpcorCo2"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;opcor_co2}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="InvcorCo2"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;incor_co2}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="OpcorCo3"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;opcor_co3}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="InvcorCo3"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;incor_co3}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="Stored2"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;stored2}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="Prestored3"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;prestored3}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="Z3Inc"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;z3Inc}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="ChipBo"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;chipBo}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="Exhalation3"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;exhalation3}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="Scrap3"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;scrap3}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="Opcor3"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;opcor3}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="Invcor3"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;invcor3}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="ChipSawAft3"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;chipSawAft3}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="ChipSawBo"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;chipSawBo}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="Stored3"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;stored3}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="ChipSawAll"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;chip_saw_all}"/>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="Stored"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;stored}"/>
-						</Record>
-					</Collection>
-				</Annotation>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/Date">
-				<Annotation Term="Common.Label" String="{@i18n&gt;fiscalPeriod}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/DecadeDec">
-				<Annotation Term="Common.Label" String="{@i18n&gt;decade}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/Z2Inc">
-				<Annotation Term="Common.Label" String="{@i18n&gt;2_inc}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/Exhalation">
-				<Annotation Term="Common.Label" String="{@i18n&gt;exhalation}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/Prestored">
-				<Annotation Term="Common.Label" String="{@i18n&gt;prestored}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/Opcor">
-				<Annotation Term="Common.Label" String="{@i18n&gt;opcor}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/Invcor">
-				<Annotation Term="Common.Label" String="{@i18n&gt;invcor}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/Scrap">
-				<Annotation Term="Common.Label" String="{@i18n&gt;scrap}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/Prestored1">
-				<Annotation Term="Common.Label" String="{@i18n&gt;prestored1}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/Inc">
-				<Annotation Term="Common.Label" String="{@i18n&gt;inc}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/Chip">
-				<Annotation Term="Common.Label" String="{@i18n&gt;chip}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/ChipSawAft">
-				<Annotation Term="Common.Label" String="{@i18n&gt;chip_saw_aft}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/ChipSawOp">
-				<Annotation Term="Common.Label" String="{@i18n&gt;chip_saw_op}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/OpcorCo">
-				<Annotation Term="Common.Label" String="{@i18n&gt;opcor_co}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/IncorCo">
-				<Annotation Term="Common.Label" String="{@i18n&gt;incor_co}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/Stored1">
-				<Annotation Term="Common.Label" String="{@i18n&gt;stored1}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/Prestored2">
-				<Annotation Term="Common.Label" String="{@i18n&gt;prestored2}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/ChipNak">
-				<Annotation Term="Common.Label" String="{@i18n&gt;chip_nak}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/ChipMm">
-				<Annotation Term="Common.Label" String="{@i18n&gt;chip_mm}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/Exhalation2">
-				<Annotation Term="Common.Label" String="{@i18n&gt;exhalation2}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/Scrap2">
-				<Annotation Term="Common.Label" String="{@i18n&gt;scrap2}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/Opcor2">
-				<Annotation Term="Common.Label" String="{@i18n&gt;opcor2}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/Invcor2">
-				<Annotation Term="Common.Label" String="{@i18n&gt;invcor2}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/ChipSawAft2">
-				<Annotation Term="Common.Label" String="{@i18n&gt;chip_saw_aft2}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/ChipSaw">
-				<Annotation Term="Common.Label" String="{@i18n&gt;chip_saw}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/OpcorCo2">
-				<Annotation Term="Common.Label" String="{@i18n&gt;opcor_co2}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/OpcorCo3">
-				<Annotation Term="Common.Label" String="{@i18n&gt;opcor_co3}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/InvcorCo2">
-				<Annotation Term="Common.Label" String="{@i18n&gt;incor_co2}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/InvcorCo3">
-				<Annotation Term="Common.Label" String="{@i18n&gt;incor_co3}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/Stored2">
-				<Annotation Term="Common.Label" String="{@i18n&gt;stored2}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/ChipSawAll">
-				<Annotation Term="Common.Label" String="{@i18n&gt;chip_saw_all}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/Stored">
-				<Annotation Term="Common.Label" String="{@i18n&gt;stored}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/Atro">
-				<Annotation Term="UI.Hidden" Bool="true"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/InvcorCo">
-				<Annotation Term="Common.Label" String="{@i18n&gt;incor_co}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/Decade">
-				<Annotation Term="UI.Hidden" Bool="true"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/GeneratedId">
-				<Annotation Term="UI.Hidden" Bool="true"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/Prestored3">
-				<Annotation Term="Common.Label" String="{@i18n&gt;prestored3}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/Z3Inc">
-				<Annotation Term="Common.Label" String="{@i18n&gt;z3Inc}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/ChipBo">
-				<Annotation Term="Common.Label" String="{@i18n&gt;chipBo}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/Exhalation3">
-				<Annotation Term="Common.Label" String="{@i18n&gt;exhalation}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/Scrap3">
-				<Annotation Term="Common.Label" String="{@i18n&gt;scrap}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/Opcor3">
-				<Annotation Term="Common.Label" String="{@i18n&gt;opcor3}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/Invcor3">
-				<Annotation Term="Common.Label" String="{@i18n&gt;invcor3}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/ChipSawAft3">
-				<Annotation Term="Common.Label" String="{@i18n&gt;chipSawAft3}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/ChipSawBo">
-				<Annotation Term="Common.Label" String="{@i18n&gt;chipSawBo}"/>
-			</Annotations>
-			<Annotations Target="Metadata.SortedWchRep/Stored3">
-				<Annotation Term="Common.Label" String="{@i18n&gt;stored3}"/>
-			</Annotations>
-		</Schema>
-	</edmx:DataServices>
+    <edmx:Reference Uri="/sap/opu/odata/sap/ZLBPWA_AC_SRV/$metadata">
+        <edmx:Include Alias="Metadata" Namespace="ZLBPWA_AC_SRV" />
+    </edmx:Reference>
+    <edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470968/UI.xml?api=v2">
+        <edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1" />
+    </edmx:Reference>
+    <edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470974/Common.xml?api=v2">
+        <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1" />
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="zlbpwa_sortedwchrep.annotations.annotations.ZLBPWA_AC_SRV">
+            <Annotations Target="Metadata.SortedWchRep">
+                <Annotation Term="UI.PresentationVariant">
+                    <Record Type="UI.PresentationVariantType">
+                        <PropertyValue Property="SortOrder">
+                            <Collection>
+                                <Record Type="Common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="Date" />
+                                </Record>
+                                <Record Type="Common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="DecadeDec" />
+                                </Record>
+                                <Record Type="Common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="FiscalPeriod" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="RequestAtLeast">
+                            <Collection>
+                                <PropertyPath>Date</PropertyPath>
+                                <PropertyPath>DecadeDec</PropertyPath>
+                                <PropertyPath>Z2Inc</PropertyPath>
+                                <PropertyPath>Exhalation</PropertyPath>
+                                <PropertyPath>Prestored</PropertyPath>
+                                <PropertyPath>Opcor</PropertyPath>
+                                <PropertyPath>Invcor</PropertyPath>
+                                <PropertyPath>Scrap</PropertyPath>
+                                <PropertyPath>Prestored1</PropertyPath>
+                                <PropertyPath>Inc</PropertyPath>
+                                <PropertyPath>Chip</PropertyPath>
+                                <PropertyPath>ChipSawAft</PropertyPath>
+                                <PropertyPath>ChipSawOp</PropertyPath>
+                                <PropertyPath>OpcorCo</PropertyPath>
+                                <PropertyPath>InvcorCo</PropertyPath>
+                                <PropertyPath>InvcorCo2</PropertyPath>
+                                <PropertyPath>InvcorCo3</PropertyPath>
+                                <PropertyPath>Stored1</PropertyPath>
+                                <PropertyPath>Prestored2</PropertyPath>
+                                <PropertyPath>ChipNak</PropertyPath>
+                                <PropertyPath>ChipMm</PropertyPath>
+                                <PropertyPath>Exhalation2</PropertyPath>
+                                <PropertyPath>Scrap2</PropertyPath>
+                                <PropertyPath>Opcor2</PropertyPath>
+                                <PropertyPath>Invcor2</PropertyPath>
+                                <PropertyPath>ChipSawAft2</PropertyPath>
+                                <PropertyPath>ChipSaw</PropertyPath>
+                                <PropertyPath>OpcorCo2</PropertyPath>
+                                <PropertyPath>OpcorCo3</PropertyPath>
+                                <PropertyPath>Invcor</PropertyPath>
+                                <PropertyPath>Stored2</PropertyPath>
+                                <PropertyPath>ChipSawAll</PropertyPath>
+                                <PropertyPath>Stored</PropertyPath>
+                                <PropertyPath>FiscalPeriod</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Visualizations">
+                            <Collection>
+                                <AnnotationPath>@UI.LineItem</AnnotationPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>Date</PropertyPath>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="FiscalPeriod" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;FiscalPeriod}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="DecadeDec" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;DecadeDec}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Date" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Date}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Prestored" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Prestored}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Prestored1" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Prestored1}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Inc" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Inc}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Chip" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Chip}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Exhalation" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Exhalation}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Scrap" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Scrap}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Opcor" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Opcor}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Invcor" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Invcor}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ChipSawAft" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;ChipSawAft}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ChipSawOp" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;ChipSawOp}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="OpcorCo" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;OpcorCo}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="InvcorCo" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;InvcorCo}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Stored1" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Stored1}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Prestored4" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Prestored4}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Z4Inc" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Z4Inc}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ChipBk" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;ChipBk}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Exhalation4" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Exhalation4}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Scrap4" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Scrap4}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Opcor4" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Opcor4}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Invcor4" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Invcor4}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ChipSawAft4" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;ChipSawAft4}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ChipSawBk" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;ChipSawBk}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="OpcorCo4" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;OpcorCo4}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="InvcorCo4" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;InvcorCo4}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Stored4" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Stored4}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Prestored2" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Prestored2}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Z2Inc" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Z2Inc}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ChipNak" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;ChipNak}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ChipMm" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;ChipMm}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Exhalation2" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Exhalation2}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Scrap2" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Scrap2}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Opcor2" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Opcor2}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Invcor2" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Invcor2}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ChipSawAft2" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;ChipSawAft2}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ChipSaw" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;ChipSaw}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="OpcorCo2" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;OpcorCo2}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="InvcorCo2" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;InvcorCo2}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="OpcorCo3" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;OpcorCo3}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="InvcorCo3" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;InvcorCo3}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Stored2" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Stored2}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Prestored3" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Prestored3}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Z3Inc" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Z3Inc}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ChipBo" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;ChipBo}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Exhalation3" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Exhalation3}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Scrap3" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Scrap3}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Opcor3" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Opcor3}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Invcor3" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Invcor3}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ChipSawAft3" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;ChipSawAft3}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ChipSawBo" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;ChipSawBo}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Stored3" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Stored3}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ChipSawAll" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;ChipSawAll}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Stored" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Stored}" />
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/Date">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Date}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/DecadeDec">
+                <Annotation Term="Common.Label" String="{@i18n&gt;DecadeDec}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/Z2Inc">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Z2Inc}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/Exhalation">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Exhalation}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/Prestored">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Prestored}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/Opcor">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Opcor}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/Invcor">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Invcor}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/Scrap">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Scrap}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/Prestored1">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Prestored1}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/Inc">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Inc}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/Chip">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Chip}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/ChipSawAft">
+                <Annotation Term="Common.Label" String="{@i18n&gt;ChipSawAft}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/ChipSawOp">
+                <Annotation Term="Common.Label" String="{@i18n&gt;ChipSawOp}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/OpcorCo">
+                <Annotation Term="Common.Label" String="{@i18n&gt;OpcorCo}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/IncorCo">
+                <Annotation Term="Common.Label" String="{@i18n&gt;IncorCo}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/Stored1">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Stored1}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/Prestored2">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Prestored2}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/ChipNak">
+                <Annotation Term="Common.Label" String="{@i18n&gt;ChipNak}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/ChipMm">
+                <Annotation Term="Common.Label" String="{@i18n&gt;ChipMm}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/Exhalation2">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Exhalation2}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/Scrap2">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Scrap2}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/Opcor2">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Opcor2}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/Invcor2">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Invcor2}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/ChipSawAft2">
+                <Annotation Term="Common.Label" String="{@i18n&gt;ChipSawAft2}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/ChipSaw">
+                <Annotation Term="Common.Label" String="{@i18n&gt;ChipSaw}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/OpcorCo2">
+                <Annotation Term="Common.Label" String="{@i18n&gt;OpcorCo2}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/OpcorCo3">
+                <Annotation Term="Common.Label" String="{@i18n&gt;OpcorCo3}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/InvcorCo2">
+                <Annotation Term="Common.Label" String="{@i18n&gt;InvcorCo2}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/InvcorCo3">
+                <Annotation Term="Common.Label" String="{@i18n&gt;InvcorCo3}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/Stored2">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Stored2}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/ChipSawAll">
+                <Annotation Term="Common.Label" String="{@i18n&gt;ChipSawAll}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/Stored">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Stored}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/Atro">
+                <Annotation Term="UI.Hidden" Bool="true" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/InvcorCo">
+                <Annotation Term="Common.Label" String="{@i18n&gt;InvcorCo}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/GeneratedId">
+                <Annotation Term="UI.Hidden" Bool="true" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/Prestored3">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Prestored3}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/Z3Inc">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Z3Inc}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/ChipBo">
+                <Annotation Term="Common.Label" String="{@i18n&gt;ChipBo}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/Exhalation3">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Exhalation3}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/Scrap3">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Scrap3}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/Opcor3">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Opcor3}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/Invcor3">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Invcor3}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/ChipSawAft3">
+                <Annotation Term="Common.Label" String="{@i18n&gt;ChipSawAft3}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/ChipSawBo">
+                <Annotation Term="Common.Label" String="{@i18n&gt;ChipSawBo}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/Stored3">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Stored3}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/CorOpVyroba">
+                <Annotation Term="Common.Label" String="{@i18n&gt;CorOpVyroba}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/CorOpVyrobaBo">
+                <Annotation Term="Common.Label" String="{@i18n&gt;CorOpVyrobaBo}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/Sale">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Sale}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/Sale2">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Sale2}" />
+            </Annotations>
+            <Annotations Target="Metadata.SortedWchRep/Sale3">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Sale3}" />
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
 </edmx:Edmx>
